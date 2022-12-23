@@ -8,7 +8,6 @@ const app = express()
 const port = process.env.PORT;
 
 
-
 //handlebars
 app.set('view engine', 'hbs');
 hbs.registerPartials(__dirname + '/views/partials'); 
@@ -17,7 +16,7 @@ hbs.registerPartials(__dirname + '/views/partials');
 app.use(express.static('public'))//public es la carpeta. se debe direccionar ahi
 
 app.get('/', (req, res) => {
-  res.render('Home',{
+  res.render('home',{
     nombre: 'Renzo Masiero',
     titulo: 'Curso de NODE'
   });
